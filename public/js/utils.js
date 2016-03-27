@@ -1,4 +1,4 @@
-var website = 'http://localhost/auction/';
+var website = 'http://huaiyu.me/auction/';
 
 function parseResponse(response)
 {
