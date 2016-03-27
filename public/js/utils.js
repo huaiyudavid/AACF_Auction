@@ -1,4 +1,4 @@
-var website = 'http://localhost/auction/';
+var website = 'http://localhost/';
 
 function parseResponse(response)
 {
