@@ -48,44 +48,44 @@ class FacebookUrlManipulatorTest extends \PHPUnit_Framework_TestCase
     {
         return [
             [
-                'http://localhost/something?state=0000&foo=bar&code=abcd',
-                'http://localhost/something?foo=bar',
+                'http://huaiyu.me/something?state=0000&foo=bar&code=abcd',
+                'http://huaiyu.me/something?foo=bar',
             ],
             [
-                'https://localhost/something?state=0000&foo=bar&code=abcd',
-                'https://localhost/something?foo=bar',
+                'https://huaiyu.me/something?state=0000&foo=bar&code=abcd',
+                'https://huaiyu.me/something?foo=bar',
             ],
             [
-                'http://localhost/something?state=0000&foo=bar&error=abcd&error_reason=abcd&error_description=abcd&error_code=1',
-                'http://localhost/something?foo=bar',
+                'http://huaiyu.me/something?state=0000&foo=bar&error=abcd&error_reason=abcd&error_description=abcd&error_code=1',
+                'http://huaiyu.me/something?foo=bar',
             ],
             [
-                'https://localhost/something?state=0000&foo=bar&error=abcd&error_reason=abcd&error_description=abcd&error_code=1',
-                'https://localhost/something?foo=bar',
+                'https://huaiyu.me/something?state=0000&foo=bar&error=abcd&error_reason=abcd&error_description=abcd&error_code=1',
+                'https://huaiyu.me/something?foo=bar',
             ],
             [
-                'http://localhost/something?state=0000&foo=bar&error=abcd',
-                'http://localhost/something?foo=bar',
+                'http://huaiyu.me/something?state=0000&foo=bar&error=abcd',
+                'http://huaiyu.me/something?foo=bar',
             ],
             [
-                'https://localhost/something?state=0000&foo=bar&error=abcd',
-                'https://localhost/something?foo=bar',
+                'https://huaiyu.me/something?state=0000&foo=bar&error=abcd',
+                'https://huaiyu.me/something?foo=bar',
             ],
             [
-                'https://localhost:1337/something?state=0000&foo=bar&error=abcd',
-                'https://localhost:1337/something?foo=bar',
+                'https://huaiyu.me:1337/something?state=0000&foo=bar&error=abcd',
+                'https://huaiyu.me:1337/something?foo=bar',
             ],
             [
-                'https://localhost:1337/something?state=0000&code=foo',
-                'https://localhost:1337/something',
+                'https://huaiyu.me:1337/something?state=0000&code=foo',
+                'https://huaiyu.me:1337/something',
             ],
             [
-                'https://localhost/something/?state=0000&code=foo&foo=bar',
-                'https://localhost/something/?foo=bar',
+                'https://huaiyu.me/something/?state=0000&code=foo&foo=bar',
+                'https://huaiyu.me/something/?foo=bar',
             ],
             [
-                'https://localhost/something/?state=0000&code=foo',
-                'https://localhost/something/',
+                'https://huaiyu.me/something/?state=0000&code=foo',
+                'https://huaiyu.me/something/',
             ],
         ];
     }
