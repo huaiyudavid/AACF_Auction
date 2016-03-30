@@ -1,4 +1,4 @@
-var website = 'http://huaiyu.me/auction/';
+var website = 'http://vandyaacf.tech/auction/';
 
 function parseResponse(response)
 {
