@@ -6,7 +6,6 @@ function check_input(url, ids, file_reader, callback, callback_all)
 		args[ids[i]] = $('#' + ids[i]).val();
 	if (file_reader) {
 		args['file'] = file_reader.result;
-		console.log(args['file']);
 	}
 	$.post(url, args)
 		.done(function(data, textStatus, a)
@@ -41,6 +40,8 @@ function check_input(url, ids, file_reader, callback, callback_all)
 			(typeof(callback_all) == 'function') && callback_all(response);
 		}).fail(function(a, textStatus, errorThrown)
 		{
+			console.log(textStatus);
+			console.log(errorThrown);
 		});
 }
 
