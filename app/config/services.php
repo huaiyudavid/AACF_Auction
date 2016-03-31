@@ -133,9 +133,10 @@ $di->set('db', function() use ($config)
 {
 	return new Phalcon\Db\Adapter\Pdo\Mysql(array(
 		'host' => $config->database->host,
+		'dbname' => $config->database->name,
+		"port" => 3306,
 		'username' => $config->database->username,
 		'password' => $config->database->password,
-		'dbname' => $config->database->name
 	));
 });
 
