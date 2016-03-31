@@ -346,7 +346,7 @@ class AjaxController extends Controller
 
 	private function save_item_picture($picture, &$response)
 	{
-		//$image = imagecreatefromstring($picture);
+		$image = imagecreatefromstring($picture);
 
 		/*if (!$image)
 		{
