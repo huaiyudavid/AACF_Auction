@@ -441,7 +441,7 @@ class AjaxController extends Controller
 
 
 
-		$name = $this->request->getPost('name', 'trim');
+		/*$name = $this->request->getPost('name', 'trim');
 		$description = $this->request->getPost('description', 'trim');
 		$price = $this->request->getPost('starting_price', 'trim');
 		$increment = $this->request->getPost('increment', 'trim');
@@ -508,7 +508,7 @@ class AjaxController extends Controller
 		}
 
 		$httpResponse->setContent($this->complete_response(json_encode($response)));
-		return $httpResponse;
+		return $httpResponse;*/
 	}
 	public function edit_itemAction()
 	{
