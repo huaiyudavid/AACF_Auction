@@ -432,15 +432,6 @@ class AjaxController extends Controller
 		if (!$this->isTokenValid())
 			return $httpResponse;
 
-
-
-		/*$response->setStatusCode(900, "NOT OK");
-		$httpResponse->setContent($this->complete_response(json_encode($response)));
-		return $httpResponse;*/
-
-
-
-
 		$name = $this->request->getPost('name', 'trim');
 		$description = $this->request->getPost('description', 'trim');
 		$price = $this->request->getPost('starting_price', 'trim');
@@ -452,10 +443,9 @@ class AjaxController extends Controller
 		if (!is_string($description))
 			return $httpResponse;
 
-		//$has_picture = !empty($picture);
-		$has_picture = false;
+		$has_picture = !empty($picture);
 
-		//if ($has_picture)
+		if ($has_picture)
 		{
 			$picture = substr($picture, strpos($picture, ',') + 1);
 			$picture = base64_decode($picture);
