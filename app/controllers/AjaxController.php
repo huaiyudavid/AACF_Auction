@@ -446,7 +446,7 @@ class AjaxController extends Controller
 		$price = $this->request->getPost('starting_price', 'trim');
 		$increment = $this->request->getPost('increment', 'trim');
 		$category = $this->request->getPost('category','trim');
-		//$picture = $this->request->getPost('file', 'trim');
+		$picture = $this->request->getPost('file', 'trim');
 		if (!is_string($name))
 			return $httpResponse;
 		if (!is_string($description))
