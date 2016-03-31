@@ -453,6 +453,7 @@ class AjaxController extends Controller
 			return $httpResponse;
 
 		//$has_picture = !empty($picture);
+		$has_picture = false;
 
 		/*if ($has_picture)
 		{
@@ -466,10 +467,10 @@ class AjaxController extends Controller
 		$this->check_item_price($price, $response);
 		$this->check_item_increment($increment, $response);
 		$this->check_item_category($category, $response);
-		/*$filename = $has_picture ? $this->save_item_picture($picture, $response) :
+		$filename = $has_picture ? $this->save_item_picture($picture, $response) :
 			str_replace(' ', '_', Category::findFirst(array('id=:id:',
 			'bind' => array('id' => $category)))->category) . '.jpg';
-		*/
+		
 		if (count($response) > 0)
 			$response['valid'] = false;
 		else
@@ -484,7 +485,7 @@ class AjaxController extends Controller
 			$item->starting_price = $price;
 			$item->increment = $increment;
 			$item->category_id = $category;
-			//$item->filename = $filename;
+			$item->filename = $filename;
 			if ($item->create())
 			{
 				// invalidate cache items
