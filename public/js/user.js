@@ -4,8 +4,10 @@ function check_input(url, ids, file_reader, callback, callback_all)
 	var input_length = ids.length;
 	for (var i = 0; i < input_length; ++i)
 		args[ids[i]] = $('#' + ids[i]).val();
-	if (file_reader)
+	if (file_reader) {
+		console.log("Hello");
 		args['file'] = file_reader.result;
+	}
 	$.post(url, args)
 		.done(function(data, textStatus, a)
 		{
