@@ -346,18 +346,19 @@ class AjaxController extends Controller
 
 	private function save_item_picture($picture, &$response)
 	{
-		$image = imagecreatefromstring($picture);
+		//$image = imagecreatefromstring($picture);
 
-		/*if (!$image)
+		if (!$image)
 		{
-			$response['fail'] = 'Unable to create image';
+			//$response['fail'] = 'Unable to create image';
+			$response['fail'] = $picture;
 			$response['valid'] = false;
 			return null;
-		}*/
+		}
 
 
-		$filename = hash('sha256', openssl_random_pseudo_bytes(512));
-		$filename .= '.jpg';
+		//$filename = hash('sha256', openssl_random_pseudo_bytes(512));
+		//$filename .= '.jpg';
 		/*$width = imagesx($image);
 		$height = imagesy($image);
 
