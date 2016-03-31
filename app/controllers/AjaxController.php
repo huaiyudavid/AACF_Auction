@@ -355,8 +355,8 @@ class AjaxController extends Controller
 			return null;
 		}
 
-		$filename = hash('sha256', openssl_random_pseudo_bytes(512));
-		$filename .= '.jpg';
+		//$filename = hash('sha256', openssl_random_pseudo_bytes(512));
+		//$filename .= '.jpg';
 		/*$width = imagesx($image);
 		$height = imagesy($image);
 
