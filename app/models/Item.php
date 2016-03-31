@@ -220,4 +220,3 @@ class Item extends Model
 	}
 
 }
-?>

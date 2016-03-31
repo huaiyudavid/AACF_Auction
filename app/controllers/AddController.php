@@ -20,5 +20,3 @@ class AddController extends ControllerBase
 		return $categories;	
 	}
 }
-
-?>
