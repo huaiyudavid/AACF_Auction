@@ -46,7 +46,7 @@ class LoginController extends ControllerBase
 
 	public function loginAction()
 	{
-		$logger = new FileAdapter("app/logs/test.log");
+		$logger = new FileAdapter("/var/www/html/auction/app/logs/test.log");
 
 		// Check if the user is already logged in
 		if ($this->session->get('user'))
