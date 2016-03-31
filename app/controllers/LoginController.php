@@ -134,7 +134,7 @@ class LoginController extends ControllerBase
 			//$logger->log("This is a message");
 			//$logger->log($e->getTraceAsString());
 			//$logger->log("line: " + $e->getLine());
-			throw new Exception("huehuehue " + $e->getTraceAsString() + " line: " + $e->getLine());
+			throw new Exception(("huehuehue " + $e->getTraceAsString() + " line: " + $e->getLine());
 			return $this->http->redirect('failingeneral');
 		}
 
