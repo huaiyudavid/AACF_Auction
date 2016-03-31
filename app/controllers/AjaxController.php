@@ -446,19 +446,19 @@ class AjaxController extends Controller
 		$price = $this->request->getPost('starting_price', 'trim');
 		$increment = $this->request->getPost('increment', 'trim');
 		$category = $this->request->getPost('category','trim');
-		$picture = $this->request->getPost('file', 'trim');
+		//$picture = $this->request->getPost('file', 'trim');
 		if (!is_string($name))
 			return $httpResponse;
 		if (!is_string($description))
 			return $httpResponse;
 
-		$has_picture = !empty($picture);
+		//$has_picture = !empty($picture);
 
-		if ($has_picture)
+		/*if ($has_picture)
 		{
 			$picture = substr($picture, strpos($picture, ',') + 1);
 			$picture = base64_decode($picture);
-		}
+		}*/
 
 		$response = array();
 		$this->check_item_name($name, $response);
@@ -466,10 +466,10 @@ class AjaxController extends Controller
 		$this->check_item_price($price, $response);
 		$this->check_item_increment($increment, $response);
 		$this->check_item_category($category, $response);
-		$filename = $has_picture ? $this->save_item_picture($picture, $response) :
+		/*$filename = $has_picture ? $this->save_item_picture($picture, $response) :
 			str_replace(' ', '_', Category::findFirst(array('id=:id:',
 			'bind' => array('id' => $category)))->category) . '.jpg';
-		
+		*/
 		if (count($response) > 0)
 			$response['valid'] = false;
 		else
@@ -484,7 +484,7 @@ class AjaxController extends Controller
 			$item->starting_price = $price;
 			$item->increment = $increment;
 			$item->category_id = $category;
-			$item->filename = $filename;
+			//$item->filename = $filename;
 			if ($item->create())
 			{
 				// invalidate cache items
