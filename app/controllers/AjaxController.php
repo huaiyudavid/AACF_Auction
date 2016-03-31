@@ -445,6 +445,8 @@ class AjaxController extends Controller
 
 		$has_picture = !empty($picture);
 
+		throw new Exception($has_picture);
+
 		if ($has_picture)
 		{
 			$picture = substr($picture, strpos($picture, ',') + 1);
