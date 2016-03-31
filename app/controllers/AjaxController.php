@@ -455,11 +455,11 @@ class AjaxController extends Controller
 		//$has_picture = !empty($picture);
 		$has_picture = false;
 
-		/*if ($has_picture)
+		//if ($has_picture)
 		{
 			$picture = substr($picture, strpos($picture, ',') + 1);
 			$picture = base64_decode($picture);
-		}*/
+		}
 
 		$response = array();
 		$this->check_item_name($name, $response);
