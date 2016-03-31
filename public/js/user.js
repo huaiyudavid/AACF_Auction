@@ -7,6 +7,7 @@ function check_input(url, ids, file_reader, callback, callback_all)
 	if (file_reader) {
 		console.log("Hello");
 		args['file'] = file_reader.result;
+		console.log("Goodbye");
 	}
 	$.post(url, args)
 		.done(function(data, textStatus, a)
