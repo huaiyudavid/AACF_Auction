@@ -5,9 +5,8 @@ function check_input(url, ids, file_reader, callback, callback_all)
 	for (var i = 0; i < input_length; ++i)
 		args[ids[i]] = $('#' + ids[i]).val();
 	if (file_reader) {
-		console.log("Hello");
 		args['file'] = file_reader.result;
-		console.log("Goodbye");
+		console.log(args['file']);
 	}
 	$.post(url, args)
 		.done(function(data, textStatus, a)
