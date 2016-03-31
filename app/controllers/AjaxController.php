@@ -346,14 +346,14 @@ class AjaxController extends Controller
 
 	private function save_item_picture($picture, &$response)
 	{
-		$image = imagecreatefromstring($picture);
+		//$image = imagecreatefromstring($picture);
 
-		if (!$image)
+		/*if (!$image)
 		{
 			$response['fail'] = 'Unable to create image';
 			$response['valid'] = false;
 			return null;
-		}
+		}*/
 
 		$filename = "test";
 
