@@ -355,8 +355,6 @@ class AjaxController extends Controller
 			return null;
 		}
 
-		return "test.jpg";
-
 		$filename = hash('sha256', openssl_random_pseudo_bytes(512));
 		$filename .= '.jpg';
 		$width = imagesx($image);
@@ -378,7 +376,7 @@ class AjaxController extends Controller
 		$new_size = ($old_size > Common::IMAGE_SIZE) ? Common::IMAGE_SIZE :
 			$old_size;
 
-		$final_image = imagecreatetruecolor($new_size, $new_size);
+		/*$final_image = imagecreatetruecolor($new_size, $new_size);
 		if (!imagecopyresampled($final_image, $image, 0, 0, $old_x, $old_y,
 			$new_size, $new_size, $old_size, $old_size))
 		{
@@ -399,7 +397,7 @@ class AjaxController extends Controller
 		}
 
 		imagedestroy($image);
-		imagedestroy($final_image);
+		imagedestroy($final_image);*/
 		return $filename;
 	}
 
