@@ -1,6 +1,6 @@
 from __future__ import division
 import mysql.connector 
-host='localhost'
+host='127.0.0.1'
 database='auction'
 username = 'auction'
 password='auction'
