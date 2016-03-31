@@ -1,6 +1,8 @@
 <?php
 
 use Facebook\GraphNodes\GraphUser;
+use Phalcon\Logger;
+use Phalcon\Logger\Adapter\File as FileAdapter;
 
 class LoginController extends ControllerBase
 {
@@ -44,6 +46,8 @@ class LoginController extends ControllerBase
 
 	public function loginAction()
 	{
+		$logger = new FileAdapter("app/logs/test.log");
+
 		// Check if the user is already logged in
 		if ($this->session->get('user'))
 			return $this->http->redirect();
@@ -127,6 +131,9 @@ class LoginController extends ControllerBase
 		catch (Exception $e)
 		{
 			// TODO: Error message about not begin able to login
+			$logger->log("This is a message");
+			$logger->log($e->getTraceAsString());
+			$logger->log("line: " + $e->getLine());
 			return $this->http->redirect('failingeneral');
 		}
 
