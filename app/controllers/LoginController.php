@@ -46,7 +46,7 @@ class LoginController extends ControllerBase
 
 	public function loginAction()
 	{
-		$logger = new FileAdapter("test.log");
+		//$logger = new FileAdapter("test.log");
 
 		// Check if the user is already logged in
 		if ($this->session->get('user'))
@@ -134,7 +134,7 @@ class LoginController extends ControllerBase
 			//$logger->log("This is a message");
 			//$logger->log($e->getTraceAsString());
 			//$logger->log("line: " + $e->getLine());
-			echo "this is a message";
+			throw new Exception("huehuehue");
 			return $this->http->redirect('failingeneral');
 		}
 
