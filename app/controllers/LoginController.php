@@ -56,13 +56,13 @@ class LoginController extends ControllerBase
 		catch (Exception $e)
 		{
 			// TODO: Error message about not begin able to login
-			return $this->http->redirect('login');
+			return $this->http->redirect('notabletologin');
 		}
 
 		if (!$accessToken)
 		{
 			// TODO: Error message about bad login
-			return $this->http->redirect('login');
+			return $this->http->redirect('badlogin');
 		}
 
 		if (!$accessToken->isLongLived())
@@ -75,7 +75,7 @@ class LoginController extends ControllerBase
 			catch (Exception $e)
 			{
 				// TODO: Error message about bad login
-				return $this->http->redirect('login');
+				return $this->http->redirect('badaccesstoken');
 			}
 		}
 
@@ -93,7 +93,7 @@ class LoginController extends ControllerBase
 			if ($responses[0]->isError() || $responses[1]->isError() ||
 				$responses[2]->isError())
 			{
-				return $this->http->redirect('login');
+				return $this->http->redirect('errorinresponses');
 			}
 
 			$fb_user = json_decode($responses[0]->getBody());
@@ -127,7 +127,7 @@ class LoginController extends ControllerBase
 		catch (Exception $e)
 		{
 			// TODO: Error message about not begin able to login
-			return $this->http->redirect('login');
+			return $this->http->redirect('failingeneral');
 		}
 
 		$redirect_controller = $_GET['redirect_controller'];
