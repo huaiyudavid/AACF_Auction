@@ -2,7 +2,7 @@
 	<div class="content_container header_bar">
 		<div class="navbar-header home_logo">
 			<a href="{{ config.application.website }}">
-				<img src="{{ config.application.website }}images/aivcf.png" alt="AIVCF Auction" height="30">
+				<img src="{{ config.application.website }}images/aacf.png" alt="AIVCF Auction" height="30">
 			</a>
 		</div>
 		<div class="dropdown navbar-right profile_dropdown">
