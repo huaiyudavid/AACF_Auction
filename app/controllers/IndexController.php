@@ -6,7 +6,7 @@ class IndexController extends ControllerBase
 {
 	public function initialize()
 	{
-		$this->tag->setTitle('AIV Auction');
+		$this->tag->setTitle('AACF Auction');
 		parent::initialize();
 	}
 
