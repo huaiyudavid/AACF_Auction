@@ -350,15 +350,14 @@ class AjaxController extends Controller
 
 		if (!$image)
 		{
-			//$response['fail'] = 'Unable to create image';
-			$response['fail'] = $picture;
+			$response['fail'] = 'Unable to create image';
 			$response['valid'] = false;
 			return null;
 		}
 
 
-		//$filename = hash('sha256', openssl_random_pseudo_bytes(512));
-		//$filename .= '.jpg';
+		$filename = hash('sha256', openssl_random_pseudo_bytes(512));
+		$filename .= '.jpg';
 		/*$width = imagesx($image);
 		$height = imagesy($image);
 
