@@ -131,7 +131,7 @@ class AjaxController extends Controller
 			else
 			{
 				$increment_int = intval($increment);
-				if ($increment_int < 1 || $increment_int > 20)
+				if ($increment_int < 2 || $increment_int > 20)
 					$response['increment'] = 'Please enter an increment between $1 and $20';
 			}
 		}
@@ -159,7 +159,7 @@ class AjaxController extends Controller
 			else
 			{
 				$price_int = intval($price);
-				if ($price_int < 1 || $price_int > 100)
+				if ($price_int < 4 || $price_int > 100)
 					$response['starting_price'] = 'Please enter a price between $1 and $100';
 			}
 		}
