@@ -53,7 +53,7 @@
 			<a class="header_item_text" href="{{ config.application.website }}add">Add Item</a>
 		</div>
 		<div class="header_item">
-			<a class="header_item_text" href="{{ config.application.website }}all/newest/none/1">All Items</a>
+			<a class="header_item_text" href="{{ config.application.website }}all/newest/none/1">Esther's Items</a>
 		</div>
 		<div class="search_bar">
 			<div class="search_bar_outline dropdown">
