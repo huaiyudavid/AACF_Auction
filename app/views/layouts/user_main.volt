@@ -17,7 +17,7 @@
 					<a id="dropdown_add_item" href="{{ config.application.website }}add">Add Item</a>
 				</li>
 				<li>
-					<a id="dropdown_all_items" href="{{ config.application.website }}all/newest/none/1">All Items</a>
+					<a id="dropdown_all_items" href="{{ config.application.website }}all/newest/none/1">Esther's Items</a>
 				</li>
 				<li>
 					<a id="dropdown_settings" href="{{ config.application.website }}settings">Settings</a>
