@@ -27,7 +27,7 @@
 						<span class="item_line" style="color: #858585"><span id="bid_count">{{ bid_count|e }}</span> Bids</span>
 					</div>
 					<div style="display:table-cell; width:10000px">
-						<form id="bid_form" method="post" action="{{ config.application.website }}item/{{ item.id|e }}" style="float:right">
+						<!-- <form id="bid_form" method="post" action="{{ config.application.website }}item/{{ item.id|e }}" style="float:right">
 							<input id="user_id" type="hidden" name="user_id" value="{{ logged_in_user_id|e }}">
 							<input id="item_id" type="hidden" name="item_id" value="{{ item.id|e }}">
 							<div style="position:relative">
@@ -36,7 +36,7 @@
 								<input type="submit" class="btn btn-primary" value="Place Bid">
 								<span id="min_bid_line" class="form_help">Minimum Bid: $<span id="min_bid">{{ min_bid|e }}</span></span>
 							</div>
-						</form>
+						</form> -->
 					</div>
 				</div>
 				<hr>
